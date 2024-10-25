@@ -4,76 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script>
-    let options = ["Rock", "Paper", "Scissors"];
-
-    function getComputerChoice(){
-
-        return options[Math.floor(Math.random() * options.length)]
-    }
-    
-    function getHumanChoice(){
-        let choice = prompt("Rock, Paper, or Scissors?").toLowerCase();
-        let validOption = "Not a valid option!";
-        options.filter((string) => {
-            if(string.toLowerCase() === choice){
-                validOption = string;
-            }
-        })
-        return validOption;
-    }
-
-    function playRound(computerChoice, humanChoice){
-
-        if(humanChoice == computerChoice){
-            console.log("This round was a draw!");
-        }
-        else if(humanChoice == "Rock"){
-            if(computerChoice == "Paper"){
-                console.log(`You lose! ${computerChoice} beats ${humanChoice}`)
-                return false;
-            }else{
-                console.log(`You Win! ${humanChoice} beats ${computerChoice}`)
-                return true;
-            }
-        }else if(humanChoice == "Paper"){
-            if(computerChoice == "Scissors"){
-                console.log(`You lose! ${computerChoice} beats ${humanChoice}`)
-                return false;
-            }else{
-                console.log(`You Win! ${humanChoice} beats ${computerChoice}`)
-                return true;
-            }
-        } else if(humanChoice == "Scissors"){
-            if(computerChoice == "Rock"){
-                console.log(`You lose! ${computerChoice} beats ${humanChoice}`)
-                return false;
-            }else{
-                console.log(`You Win! ${humanChoice} beats ${computerChoice}`)
-                return true;
-            }
-        }
-    }
-    
-    function playGame(){
-        let computerScore = 0;
-        let humanScore = 0; 
-        for(let i = 0; i<5; i++){
-            let result = playRound(getComputerChoice(), getHumanChoice());
-            result ? humanScore++ : computerScore++;
-        }
-        if(humanScore > computerScore){
-            console.log(`You won the match! Your score is ${humanScore} and the computer's score was ${computerScore}`)
-        }else{
-            console.log(`You lost the match... Your score is ${humanScore} and the computer's score was ${computerScore}`)
-        }
-    }
-
-    playGame();
-
+    <script src="rpsLogic.js" defer>
     </script>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    
+    <div class="header">
+        <h1> Rock Paper Scissors</h1>
+    </div>
+    <div class="scoreCard">
+        <div class="humanScoreCard">
+            <h2>Human Score</h2>
+            <div><h3 class="humanScoreNumber">0</h3></div>
+        </div> 
+        <div class="versusCard">
+            <h2>VS</h2>
+        </div>
+        <div class="computerScoreCard">
+            <h2>Computer Score</h2>
+            <div><h3 class="computerScoreNumber">0</h3></div>
+        </div>
+    </div>
+    <div class="buttonCard">
+        <div class="rockBtnDiv">
+            <button class="rockBtn button-74">Rock!</button>
+        </div>
+        <div class="paperBtnDiv">
+            <button class="paperBtn button-74">Paper!</button>
+        </div>
+        <div class="scissorsBtnDiv">
+            <button class="scissorsBtn button-74">Scissors!</button>
+        </div>
+    </div>
 </body>
 </html>
