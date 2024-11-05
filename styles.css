@@ -1,0 +1,80 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    background-color: #0A1828;
+}
+.header{
+    color: #178582;
+    display: flex;
+    justify-content: center;
+}
+.scoreCard, .buttonCard{
+    color: #BFA181;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 300px;
+    padding-right: 300px;
+    padding-bottom: 150px;
+}
+.playGameCard, .roundResultCard {
+    display: flex;
+    color: #BFA181;
+    justify-content: center;
+    padding-bottom: 50px;
+}
+.humanScoreCard, .computerScoreCard{
+    text-align: center;
+}
+.rockBtnDiv{
+    padding-left:50px;
+}
+.scissorsBtnDiv{
+    padding-right: 50px;
+}
+h1{
+    font-size:36px;
+}
+h2{
+    font-size: 32px;
+}
+
+/* CSS */
+.button-74 {
+  background-color: #fbeee0;
+  border: 2px solid #422800;
+  border-radius: 30px;
+  box-shadow: #422800 4px 4px 0 0;
+  color: #422800;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 50px;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-74:hover {
+  background-color: #fff;
+}
+
+.button-74:active {
+  box-shadow: #422800 2px 2px 0 0;
+  transform: translate(2px, 2px);
+}
+
+button:disabled {
+    background-color: gray;
+    color: white;
+    cursor: not-allowed;
+  }
+
+@media (min-width: 768px) {
+  .button-74 {
+    min-width: 120px;
+    padding: 0 25px;
+  }
+}
